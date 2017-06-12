@@ -75,7 +75,7 @@ for (let i = 0; i < btns.length; i++) {
     //当按钮是数字
     if (!isNaN(this.innerHTML)) {
       //如果第一次点击的是0 的话 不做任何操作将 0 放入数组中 然后删除队列的一个元素
-      if (this.innerHTML=="0"&&isArr.length == 1) {
+      if (this.innerHTML== 0 && (isArr.length == 1&&isArr[0] ==0)) {
         isArr.push(this.innerHTML);
         isArr.shift();
       }
