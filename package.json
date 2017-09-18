@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/so-hard/calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/so-hard/calculator/issues"
+  },
+  "homepage": "https://github.com/so-hard/calculator#readme",
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-plugin-react": "^7.1.0"
+  }
+}
