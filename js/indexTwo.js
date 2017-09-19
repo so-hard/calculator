@@ -1,7 +1,7 @@
 //3.0 运用对象
 
 function getsome(x ) {
-    console.log(x.element.length);
+    // console.log(x.element.length);
     switch (x.element.length > 1) { // 判断传进的 文本节点的长度
         case true:
         for (let i = 0; i < x.element.length; i++) {
@@ -118,7 +118,7 @@ var key = {
     getsome(key.equalBtn);
     getsome(key.clearBtn);
     getsome(key.backspaceBtn);
-console.log(key.numBtn.element);
+// console.log(key.numBtn.element);
 // for (var x in key) {
 // console.log(x);
 // }
