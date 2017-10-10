@@ -112,7 +112,7 @@ for (let i = 0; i < btns.length; i++) {
 				isArr.push(this.innerHTML);
 			}
 		}
-			isOv (Screen) ;
+		isOv (Screen) ;
 	};
 }
 
@@ -144,7 +144,7 @@ function stringToArr (theString , theArr ) {
 }
 
 
-function isOv(one, ) {
+function isOv(one) {
 	if (one.clientWidth >200) {
 		doBackspace ();
 	}
