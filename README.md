@@ -2,6 +2,8 @@
 
 ![demo](gif/1.gif 'calculator')
 
+[预览地址](https://so-hard.github.io/calculator/)
+
 ## demo的思路
 
 ### 样式方面
@@ -157,7 +159,8 @@
 
 ## js方面
 
-1. 首先分析计算器有数字按钮`NumButs`，符号按钮`OperatorButs`，等于按钮`EqualBut`,退格按钮`BackspaceBut`,清空按钮`ClearBut`,以及开关按钮`SwiBtn`，他们都有各自的`element`属性以及`done`方法。还有公共的`bind` `unbind`的方法。
+1. 首先分析计算器有数字按钮`NumButs`，符号按钮`OperatorButs`，等于按钮`EqualBut`,退格按钮`BackspaceBut`,清空按钮`ClearBut`,以及开关按钮`SwiBtn`  
+他们都有各自的`element`属性以及`done`方法。还有公共的`bind` `unbind`的方法。
 2. 建立`But`对象以及他的原型对象，给原型对象添加`bind`和`unbind`方法,给`But`对象添加element属性，以及done方法
 
     ```js
