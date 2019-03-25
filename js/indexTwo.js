@@ -3,43 +3,43 @@
 function getsome(x) {
 	// console.log(x.element.length);
 	switch (x.element.length > 1) { // 判断传进的 文本节点的长度
-	case true:
-		for (let i = 0; i < x.element.length; i++) {
-			x.element[i].onclick = x.done; // 循环 触发点击事件
-		}
-		break;
-	default:
-		x.element[0].onclick = x.done;
+		case true:
+			for (let i = 0; i < x.element.length; i++) {
+				x.element[i].onclick = x.done; // 循环 触发点击事件
+			}
+			break;
+		default:
+			x.element[0].onclick = x.done;
 	}
 }
 
 // 数字按钮的方法
 function numFunction(y) {
 	switch (y.innerHTML) {
-	case 0:
-		//如果第一次点击的是0 的话 不做任何操作
-		if (y.innerHTML == 0 && (isArr.length == 1 && isArr[0] == 0)) {
+		case 0:
+			//如果第一次点击的是0 的话 不做任何操作
+			if (y.innerHTML == 0 && (isArr.length == 1 && isArr[0] == 0)) {
+				break;
+			}
+			showNumAndSave();
 			break;
-		}
-		showNumAndSave();
-		break;
 		// 1. 当点击的是小数点时候 如果屏幕中只有0的话直接进行拼接 然后将小数点压入数组
 		//2.小数点的拼接只能在前一位置是数字的时候
-	case ".":
-		if (isArr.length == 1 && isArr[0] == "0") {
-			showNumAndSave(y);
-		} else if (!isNaN(isArr[isArr.length - 1])) {
-			showNumAndSave(y);
-		}
-		break;
-	default:
-		if ((isArr.length <= 1) && (isArr[0] == "0")) {
-			Screen.innerHTML = y.innerHTML;
-			isArr.push(y.innerHTML);
-			isArr.shift();
-		} else {
-			showNumAndSave(y);
-		}
+		case ".":
+			if (isArr.length == 1 && isArr[0] == "0") {
+				showNumAndSave(y);
+			} else if (!isNaN(isArr[isArr.length - 1])) {
+				showNumAndSave(y);
+			}
+			break;
+		default:
+			if ((isArr.length <= 1) && (isArr[0] == "0")) {
+				Screen.innerHTML = y.innerHTML;
+				isArr.push(y.innerHTML);
+				isArr.shift();
+			} else {
+				showNumAndSave(y);
+			}
 	}
 }
 
@@ -67,8 +67,8 @@ var key = {
 	numBtn: {
 		element: num,
 		done: function () {  // 能不能 函数名 来代替匿名函数 作为 方法 ..  2222 怎么精简
-			let y = this;
-			numFunction(y);
+			numFunction(this);
+			console.log(this);
 		}
 	},
 	operatorBtn: {
