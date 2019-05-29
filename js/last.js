@@ -5,7 +5,6 @@ let calulater = (() => {
         } else {
             node.className = `${node.className} ${name}`;
             console.log(node.className);
-
         }
     }
     

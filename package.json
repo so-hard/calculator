@@ -1,0 +1,8 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:so-hard/calculator.git",
+  "author": "so-hard <qq1136339397@gmail.com>",
+  "license": "MIT"
+}

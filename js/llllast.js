@@ -1,12 +1,14 @@
 (function () {
-    function But(elem, done) {
-        this.element = elem;
-        this.done = done;
+    class But {
+        constructor(elem, done) {
+            this.element = elem;
+            this.done = done;
+        }
     }
 
     But.prototype = {
         constructor: But,
-        bindAc: function bindAc() {
+         bindAc() {
             // console.log(x.element.length);
             switch (this.element.length > 1) { // 判断传进的 文本节点的长度
                 case true:
@@ -18,7 +20,7 @@
                     this.element[0].onclick = this.done;
             }
         },
-        unBind: function unBind() {
+        unBind() {
             switch (this.element.length > 1) { // 判断传进的 文本节点的长度
                 case true:
                     for (let i = 0; i < this.element.length; i++) {
@@ -95,7 +97,7 @@
     function equalDone() {
         Screen.innerHTML = eval(Screen.innerHTML);
         isArr.length = 0;
-        for (var i = 0; i < Screen.innerHTML.length; i++) {
+        for (let i = 0; i < Screen.innerHTML.length; i++) {
             isArr.push(Screen.innerHTML[i]);
         }
     }
