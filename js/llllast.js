@@ -4,11 +4,7 @@
             this.element = elem;
             this.done = done;
         }
-    }
-
-    But.prototype = {
-        constructor: But,
-         bindAc() {
+        bindAc() {
             // console.log(x.element.length);
             switch (this.element.length > 1) { // 判断传进的 文本节点的长度
                 case true:
@@ -19,7 +15,8 @@
                 default:
                     this.element[0].onclick = this.done;
             }
-        },
+        }
+
         unBind() {
             switch (this.element.length > 1) { // 判断传进的 文本节点的长度
                 case true:
@@ -29,22 +26,6 @@
                     break;
                 default:
                     this.element[0].onclick = null;
-            }
-        }
-    }
-
-    function fn(obj) {
-        for (let v in obj) {
-            if (flag == 1) {
-                if (v == 'bindAc') {
-                    console.log(obj[v]);
-                    obj[v]()
-                }
-            } else {
-                if (v == 'unBind') {
-                    console.log(obj[v]);
-                    obj[v]()
-                }
             }
         }
     }
@@ -156,11 +137,25 @@
     }
 
     function init() {
-        fn(NumButs);
-        fn(OperatorButs);
-        fn(EqualBut);
-        fn(ClearBut);
-        fn(BackspaceBut);
+        switch (flag) {
+            case 1:
+                NumButs.bindAc()
+                OperatorButs.bindAc()
+                EqualBut.bindAc()
+                ClearBut.bindAc()
+                BackspaceBut.bindAc()
+                SwiBtn.bindAc();
+                break;
+
+            case 0:
+                NumButs.unBind()
+                OperatorButs.unBind()
+                EqualBut.unBind()
+                ClearBut.unBind()
+                BackspaceBut.unBind()
+                break
+        }
+
     };
 
     let isKeys = document.getElementsByClassName("keys")[0];  // 获取数字和运算符按钮
@@ -181,7 +176,6 @@
     let SwiBtn = new But(swi, swiDone);
 
     init();
-    SwiBtn.bindAc();
 })();
 
 /*
